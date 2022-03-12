@@ -3,6 +3,7 @@ import os
 import random
 
 
+
 pygame.font.init()
 
 WIDTH, HEIGHT = 750, 750
@@ -28,7 +29,7 @@ BG = pygame.transform.scale(pygame.image.load('assets/background-black.png'), (W
 
 # Fonts
 title_font = pygame.font.SysFont("comicsans", 70)
-cursor_font = pygame.font.SysFont("comicsans", 150)
+cursor_font = pygame.font.SysFont("comicsans", 90)
 
 
 class Laser:
@@ -271,7 +272,7 @@ def main_menu():
         cursor_label = cursor_font.render("*", True, (255, 255, 255))
         WIN.blit(title_label, (WIDTH / 2 - title_label.get_width() / 2, 200))
         WIN.blit(start_label, (WIDTH / 2 - start_label.get_width() / 2, 350))
-        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 400))
+        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 420))
         WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, cus_value))
         pygame.display.update()
         for event in pygame.event.get():
@@ -282,12 +283,12 @@ def main_menu():
                     if state == "Start":
                         state = "Quit"
                         print(state)
-                        cus_value = 400
+                        cus_value = 420
                         WIN.blit(BG, (0, 0))
                         WIN.blit(title_label, (WIDTH / 2 - title_label.get_width() / 2, 200))
                         WIN.blit(start_label, (WIDTH / 2 - start_label.get_width() / 2, 350))
-                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 400))
-                        WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, 400))
+                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 420))
+                        WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, 420))
                         pygame.display.update()
                     elif state == "Quit":
                         state = "Start"
@@ -296,19 +297,19 @@ def main_menu():
                         WIN.blit(BG, (0, 0))
                         WIN.blit(title_label, (WIDTH / 2 - title_label.get_width() / 2, 200))
                         WIN.blit(start_label, (WIDTH / 2 - start_label.get_width() / 2, 350))
-                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 400))
+                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 420))
                         WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, 350))
                         pygame.display.update()
                 elif event.key == pygame.K_UP:
                     if state == "Start":
                         state = "Quit"
                         print(state)
-                        cus_value = 400
+                        cus_value = 420
                         WIN.blit(BG, (0, 0))
                         WIN.blit(title_label, (WIDTH / 2 - title_label.get_width() / 2, 200))
                         WIN.blit(start_label, (WIDTH / 2 - start_label.get_width() / 2, 350))
-                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 400))
-                        WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, 400))
+                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 420))
+                        WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, 420))
                         pygame.display.update()
                     elif state == "Quit":
                         state = "Start"
@@ -317,7 +318,7 @@ def main_menu():
                         WIN.blit(BG, (0, 0))
                         WIN.blit(title_label, (WIDTH / 2 - title_label.get_width() / 2, 200))
                         WIN.blit(start_label, (WIDTH / 2 - start_label.get_width() / 2, 350))
-                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 400))
+                        WIN.blit(quit_label, (WIDTH / 2 - quit_label.get_width() / 2, 420))
                         WIN.blit(cursor_label, (WIDTH / 2 - start_label.get_width() / 2 - 50, 350))
                         pygame.display.update()
                 elif event.key == pygame.K_RETURN:
@@ -326,3 +327,6 @@ def main_menu():
                     elif state == "Quit":
                         run = False
                         pygame.quit()
+
+
+main_menu()
