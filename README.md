@@ -9,7 +9,7 @@ A small replica of **Space Shooter** game using python basic conecpts and pygame
 
 
 # How to run the game?  
-### Prerequisite  
+### Prerequisites  
 * Python installed in the device.
 * Pygame package installed in python.  
 ----
